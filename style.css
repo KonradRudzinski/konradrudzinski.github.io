@@ -212,6 +212,16 @@ p{
     margin-right: auto; 
 }
 
+video{
+    padding:50px;
+    position: absolute;
+}
+
+audio{
+    padding:50px;
+    position: absolute;
+}
+
 footer{
     text-align: center; 
     position: fixed;
