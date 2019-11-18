@@ -9,11 +9,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
 	<link rel="icon" type="image/x-icon" href=""/>
+    <script src="script.js"></script>
+
 </head>
 
 <body>
 	<header>
-     <img src="header.jpg" alt="Nocne zdjęcie samochodu stojącego tyłem" width="1500" height="600">
+        <img src="header.jpg" alt="Nocne zdjęcie samochodu stojącego tyłem" width="1500" height="600">
         <div class="name">
             <h1 class="imie">Konrad Rudziński</h1>
             <h2>Fotografia</h2>
@@ -47,14 +49,65 @@
         To nagranie dźwiękowe nie jest chronione, ponieważ zostało opublikowane na terenie Unii Europejskiej ponad 50 (dyrektywa 2006/116/WE) lub 70 lat temu (w 2012 roku jeszcze nie została przyjęta), a prawa wykonawców i producentów do tego nagrania wygasły zgodnie z dyrektywą 2006/116/WE.
         -->
     
-	<footer>
-        <!-- SOCIAL MEDIA -->
-        <div class="socialmedia" id="socialmedia">
-        <a href="https://www.facebook.com/rudzinski.photo/" target="_blank"><img src="https://img.icons8.com/metro/26/000000/facebook-new--v2.png" ></a>
-        <a href="https://www.instagram.com/rudzinski.photo/" target="_blank"><img src="https://img.icons8.com/metro/26/000000/instagram-new.png"></a>
-        <a href="https://www.github.com/KonradRudzinski/" target="_blank"><img src="https://img.icons8.com/material-outlined/26/000000/github.png"></a>
-    </div> 
-    Copyright © 2019 Konrad Rudziński
-    </footer>
+    
+    <form class="form" action="..." method="post">
+        <div class="form-row">
+            <label for="formName">Tekst</label>
+            <input type="text" id="formName" placeholder="Może być puste" />
+        </div>
+
+        <div class="form-row">
+            <label for="formDate">Data</label>
+            <input type="text" id="formDate" pattern="^\d{2}\.\d{2}\.\d{4}$" required placeholder="dd.mm.rrrr" />
+        </div>
+
+        <div class="form-row">
+            <label for="formUrl">URL</label>
+            <input type="url" id="formUrl" required placeholder="http://" />
+        </div>
+
+        <div class="form-row">
+            <label for="formEmail" >Email</label>
+            <input type="email"  id="formEmail" required placeholder="Email" />
+        </div>
+
+        <div class="form-row">
+            <label for="formMessage">Wpisz tylko abc</label>
+            <textarea id="formMessage" required pattern="^abc$"></textarea>
+        </div>
+
+        <div class="form-row">
+            <label for="formThing">Wybierz</label>
+            <select id="formThing" required>
+                <option value="">Wybierz coś</option>
+                <option value="1">Super opcja 1</option>
+                <option value="2">Super opcja 2</option>
+            </select>
+        </div>
+
+        <fieldset class="form-row">
+            <label>Zaznacz</label>
+            <input type="radio" required name="test1" /> 1
+            <input type="radio" required name="test1" /> 2
+            <input type="radio" required name="test1" /> 3
+            <input type="radio" required name="test1" /> 4
+            <input type="radio" required name="test1" /> 5
+        </fieldset>
+
+        <fieldset class="form-row">
+            <label>Zaznacz</label>
+            <input type="checkbox" required name="test2" /> 1
+            <input type="checkbox" required name="test2" /> 2
+            <input type="checkbox" required name="test2" /> 3
+            <input type="checkbox" required name="test2" /> 4
+            <input type="checkbox" required name="test2" /> 5
+        </fieldset>
+
+        <div class="form-row">
+            <button type="submit" class="button">Wyślij</button>
+        </div>
+    </form>
+
+
 </body>
 </html>
